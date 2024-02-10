@@ -1,5 +1,11 @@
 def strange_algorithm(n, arr=[], rev=False):
     if not bool(arr):
         arr.extend([i for i in range(1, n + 1)])
+    arr.sort(reverse=rev)
+    for i in range(len(arr)):
+        if i <= len(arr) - 1 and len(arr) > 1:
+            del arr[i]
     if rev:
-        for i in range()
+        return strange_algorithm(n, arr, rev=False)
+    else:
+        return strange_algorithm(n, arr, rev=True)
