@@ -1,11 +1,11 @@
 class Solution(object):
-    def maxSatisfied(self, customers, grumpy, minutes):
-        ans = 0
-        maxim = 0
-        for i in range(len(customers)):
-            if minutes + i <= len(customers) - 1:
-                for j in range(i, minutes + i):
-                    if maxim < customers
-        for i in range(len(customers)):
-            if grumpy[i] == 0:
-                ans += customers[i]
+    def maxSumDivThree(self, nums):
+        dp = [0,0,0]
+        for i in nums:
+            for j in dp[:]:
+                dp[(j + i) % 3] = max(dp[(j + i) % 3], j + i)
+        return dp[0]
+
+
+nums = [1,2,3,4]
+print(Solution().maxSumDivThree(nums))
