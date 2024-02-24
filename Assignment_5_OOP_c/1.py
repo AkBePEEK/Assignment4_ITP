@@ -4,9 +4,9 @@ class Person:
         self.lastname = lastname
         self.age = age
 
-
-def people_sort(people_list, attribute):
-    return sorted(people_list, key=lambda x: x.attribute)
+    def people_sort(self, people_list, attribute):
+        for i in range(len(people_list)):
+            people_list[i].attribute
 
 
 p1 = Person("Michael", "Smith", 40)
